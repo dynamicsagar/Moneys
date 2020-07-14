@@ -100,19 +100,25 @@ class Util(object):
             response.raise_for_status()
         except HTTPError as http_err:
             self.log.info(f'HTTP error occurred: {http_err}')
+            raise http_err
         except Exception as err:
             self.log.info(f'Other error occurred: {err}')
+            raise
         else:
-            self.log.info('Success!')
+            self.log.info('verifyStatusCode :: Success!')
 
     def verifyResponseStatus(self, response, message):
         try:
-            response_body = response.json()
-            assert response_body['status'] == message
+            #response_body = response.json()
+            assert response['status'] == message
         except AssertionError as error:
-            self.log.info(error)
+            self.log.info(f"Status value mismatched :{error}")
+            raise
         except Exception as err:
             self.log.info(f'Other error occurred: {err}')
+            raise
+        else:
+            self.log.info('verifyResponseStatus :: Matched!')
 
     def verifyAPITimeout(self, response, timeout=0.1):
         """
