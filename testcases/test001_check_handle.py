@@ -1,8 +1,7 @@
 import unittest
-import logging
 from silasdk import User
 from testcases.test_config import *
-import utilities.custom_logger as cl
+from utilities.util import *
 
 
 class CheckHandle(unittest.TestCase):

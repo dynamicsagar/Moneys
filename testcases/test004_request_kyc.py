@@ -8,7 +8,7 @@ class RequestKyc(unittest.TestCase):
     log = cl.customLogger(logging.DEBUG)
 
     # Get user data from the excel sheet.
-    getUserHandle, getPrivateKey = utility.getDataFromSheet(loc)
+    getUserHandle, getPrivateKey = utility.getDataFromSheet()
 
     def test_register_kyc_200(self):
 

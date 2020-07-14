@@ -75,7 +75,7 @@ class Util(object):
         except:
             self.log.info("Unable to insert values into xls")
 
-    def getDataFromSheet(self, loc):
+    def getDataFromSheet(self):
         """
         Get user_handle and eth_private_key from the xls sheet.
         Parameters:
