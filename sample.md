@@ -23,19 +23,24 @@ pip3 install silasdk
 ## Install requirements
 Install additional requirements from requirements.text.
 
-##Utility Class :
+## Packages for framework
+
+## Packages : 
+We have separate packages for test, utility and testdata, All tests related classes come under Tests Package.
+
+## Utility Class
 Utility class stores and handles the functions (The Code which is repetitive in Nature Such as accessing excels, getuniquename, statuscode etc..) Which can be commonly used across the framework. The reason behind creating a utility class is to achieve reusability .
 
-##Test Data : 
+## Test Data 
 All the historical test data will be kept in excel sheet(silamoney.xlsx), we pass test data and handle data driven testing. We use python libraries to handle excel sheets.
 
-##Pytest  : 
+## Pytest 
 This will be used for Assertions,Grouping and Parallel execution.
 
-##Version Control Tool : 
+## Version Control Tool 
 we use 1 as a repository to store our tests scripts.
 
-##Jenkins: 
+## Jenkins
 By using Jenkins CI (Continuous Integration) Tool, We execute test cases on daily and for Nightly execution based on the schedule.Test Result will be sent to the peers using Jenkins.
 
 ##Extent Reports 
