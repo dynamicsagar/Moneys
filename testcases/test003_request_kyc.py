@@ -11,7 +11,6 @@ class RequestKyc(unittest.TestCase):
     getUserHandle, getPrivateKey = utility.getDataFromSheet()
 
     def test_register_kyc_200(self):
-
         payload = {
             "user_handle": self.getUserHandle
         }
@@ -21,7 +20,6 @@ class RequestKyc(unittest.TestCase):
         self.log.info(response)
 
     def test_register_kyc_custom_403(self):
-
         payload = {
             "user_handle": self.getUserHandle,
             "kyc_level": "CUSTOM_KYC_FLOW_NAME"

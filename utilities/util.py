@@ -7,6 +7,7 @@ Example:
 """
 
 import time
+import datetime
 import traceback
 import random, string
 import utilities.custom_logger as cl
@@ -93,10 +94,8 @@ class Util(object):
         except:
             self.log.info("Unable to get data from the xls")
 
-    def verifyResponseStatusCode(self, url):
+    def verifyStatusCode(self, response):
         try:
-            response = requests.get(url)
-
             # If the response was successful, no Exception will be raised
             response.raise_for_status()
         except HTTPError as http_err:
@@ -106,16 +105,37 @@ class Util(object):
         else:
             self.log.info('Success!')
 
-    def verifyResponseStatus(self, url):
+    def verifyResponseStatus(self, response):
         try:
-            response = requests.get(url)
-            assert(response["status"], "SUCCESS")
-            self.log.info('Check_handle verification passed!!')
-            return True
+            response_body = response.json()
+            assert response_body['status'] == 'SUCCESS'
         except AssertionError as error:
             self.log.info(error)
-        except Exception as exception:
-            self.log.info(exception)
+        except Exception as err:
+            self.log.info(f'Other error occurred: {err}')
+
+    def verifyAPITimeout(self, response, timeout=0.1):
+        """
+        This can be useful to monitor internal websites and to trigger an alert if response time is slow,
+         or simply to check response time over a period of time.
+            :param url:
+        """
+        try:
+            response.raise_for_status()
+            respTime = str(round(response.elapsed.total_seconds(), 0))
+            currDate = datetime.datetime.now()
+            currDate = str(currDate.strftime("%d-%m-%Y %H:%M:%S"))
+            self.log.info(currDate + " " + respTime)
+        except requests.exceptions.HTTPError as err01:
+            self.log.critical("HTTP error: ", err01)
+        except requests.exceptions.ConnectionError as err02:
+            self.log.critical("Error connecting: ", err02)
+        except requests.exceptions.Timeout as err03:
+            self.log.critical("Timeout error:", err03)
+        except requests.exceptions.RequestException as err04:
+            self.log.critical("Error: ", err04)
+
+
 
 
 

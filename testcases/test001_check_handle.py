@@ -16,6 +16,7 @@ class CheckHandle(unittest.TestCase):
         self.log.info(response)
         self.assertEqual(response["status"], "SUCCESS")
 
+
     def test_check_handle_401(self):
         payload = {
             "user_handle": check_handle_status_401
