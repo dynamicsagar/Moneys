@@ -1,0 +1,19 @@
+07/14/2020 10:24:12 AM - CheckHandle - INFO: testunvwkwmo.silamoney.eth
+07/14/2020 10:24:13 AM - CheckHandle - INFO: {'message': 'saty is taken.', 'reference': 'bd5b8b60-fabf-49d8-9b58-768c11114acd', 'status': 'FAILURE'}
+07/14/2020 10:25:59 AM - CheckHandle - INFO: testxnbzbpfb.silamoney.eth
+07/14/2020 10:25:59 AM - CheckHandle - INFO: {'message': 'testxnbzbpfb is available!', 'reference': '8e6ca6c0-3c05-4d7a-80a7-f964e6ae70df', 'status': 'SUCCESS'}
+07/14/2020 10:26:00 AM - CheckHandle - INFO: {'message': 'saty is taken.', 'reference': '5b6b268e-2508-4c95-a4db-69f5d63dd8c0', 'status': 'FAILURE'}
+07/14/2020 10:29:25 AM - CheckHandle - INFO: {'message': 'saty is taken.', 'reference': '460c6433-b953-47c4-8103-ef5d39ee71c6', 'status': 'FAILURE'}
+07/14/2020 10:33:54 AM - CheckHandle - INFO: testuuprfyzp.silamoney.eth
+07/14/2020 10:33:54 AM - CheckHandle - INFO: {'message': 'testuuprfyzp is available!', 'reference': 'a36d7857-7d6f-4481-b5ce-4a55dc226003', 'status': 'SUCCESS'}
+07/14/2020 10:33:57 AM - CheckHandle - INFO: {'message': 'saty is taken.', 'reference': 'afe25346-7db1-4929-94b7-8f387d06db92', 'status': 'FAILURE'}
+07/14/2020 10:35:16 AM - CheckHandle - INFO: testckxtmzfg.silamoney.eth
+07/14/2020 10:35:16 AM - CheckHandle - INFO: {'message': 'testckxtmzfg is available!', 'reference': '1c53e99e-00e9-4b73-a8fa-8167d2270323', 'status': 'SUCCESS'}
+07/14/2020 10:35:17 AM - CheckHandle - INFO: {'message': 'saty is taken.', 'reference': '45f742c3-8ba7-414c-b91d-38ab344c49f8', 'status': 'FAILURE'}
+07/14/2020 10:35:49 AM - CheckHandle - INFO: testrgtjgwhi.silamoney.eth
+07/14/2020 10:35:49 AM - CheckHandle - INFO: {'message': 'testrgtjgwhi is available!', 'reference': '2e36cc90-27bd-4256-b6a0-aa55cec5d649', 'status': 'SUCCESS'}
+07/14/2020 10:35:49 AM - CheckHandle - INFO: {'message': 'saty is taken.', 'reference': '1faa97dd-ff9a-42ed-be69-e9f0370a7347', 'status': 'FAILURE'}
+07/14/2020 10:36:44 AM - CheckHandle - INFO: testaloumpfw.silamoney.eth
+07/14/2020 10:36:44 AM - CheckHandle - INFO: {'message': 'testaloumpfw is available!', 'reference': 'a44005f8-0731-4038-b876-82faffb25e8b', 'status': 'SUCCESS'}
+07/14/2020 10:36:44 AM - CheckHandle - INFO: testaloumpfwis available!
+07/14/2020 10:36:45 AM - CheckHandle - INFO: {'message': 'saty is taken.', 'reference': '38bbc122-2baa-4fc8-8953-855bf9b276ae', 'status': 'FAILURE'}
