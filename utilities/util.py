@@ -105,10 +105,10 @@ class Util(object):
         else:
             self.log.info('Success!')
 
-    def verifyResponseStatus(self, response):
+    def verifyResponseStatus(self, response, message):
         try:
             response_body = response.json()
-            assert response_body['status'] == 'SUCCESS'
+            assert response_body['status'] == message
         except AssertionError as error:
             self.log.info(error)
         except Exception as err:
