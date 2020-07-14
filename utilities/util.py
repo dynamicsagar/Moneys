@@ -15,7 +15,6 @@ from xlwt import Workbook
 import xlrd
 import requests
 from requests.exceptions import HTTPError
-import json
 
 
 class Util(object):
@@ -72,7 +71,7 @@ class Util(object):
             sheet1.write(1, 0, inserthandle)
             sheet1.write(2, 0, insertethkey)
             wb.save("C:\\Users\\sagar\\PycharmProjects\\SilaMoneyAutomationTesting\\testdata\\datasheet.xls")
-            self.log.info("Successfully inserted the both the values in the sheet")
+            self.log.info("Successfully inserted both the values in the sheet")
         except:
             self.log.info("Unable to insert values into xls")
 
@@ -84,6 +83,7 @@ class Util(object):
                 getPrivateKey: eth_private_key
         """
         try:
+            loc = ("C:\\Users\\sagar\\PycharmProjects\\SilaMoneyAutomationTesting\\testdata\\datasheet.xls")
             wb = xlrd.open_workbook(loc)
             sheet = wb.sheet_by_index(0)
             getUserHandle = (sheet.cell_value(1, 0))
@@ -92,7 +92,6 @@ class Util(object):
             return getUserHandle, getPrivateKey
         except:
             self.log.info("Unable to get data from the xls")
-
 
     def verifyResponseStatusCode(self, url):
         try:
@@ -106,6 +105,19 @@ class Util(object):
             self.log.info(f'Other error occurred: {err}')
         else:
             self.log.info('Success!')
+
+    def verifyResponseStatus(self, url):
+        try:
+            response = requests.get(url)
+            assert(response["status"], "SUCCESS")
+            self.log.info('Check_handle verification passed!!')
+            return True
+        except AssertionError as error:
+            self.log.info(error)
+        except Exception as exception:
+            self.log.info(exception)
+
+
 
 
 

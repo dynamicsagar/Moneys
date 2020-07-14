@@ -5,12 +5,6 @@ The main objectives in functional automation testing of the API are:
 2. To ensure that the implementation is working as specified according to the requirements specification.
 3. To prevent regressions between code merges and releases.
 
-##### API Test Action
-Below are the  individual actions we will take as per API test flow. For each API request, the test would need to take the following actions: 
-1. **Verify correct HTTP status code**. For example, creating a resource should return 201 CREATED and unpermitted requests should return 403 FORBIDDEN, etc.
-2. **Verify response payload**. Check valid JSON body and correct field names, types, and values including in error responses.
-3. **Verify response headers**. HTTP server headers have implications on both security and performance.
-
 ## Usage
 
 ### Installation
@@ -23,7 +17,27 @@ pip3 install silasdk
 ## Install requirements
 Install additional requirements from requirements.text.
 
-## Packages for framework
+```python
+
+pip install xlwt
+pip install xlrd
+pip install pytest
+
+```
+## How to execute testcase
+
+For executing the testcase we have to use below command.
+```python
+pytest testcases\testcasename
+```
+
+##### API Test Action
+Below are the  individual actions we will take as per API test flow. For each API request, the test would need to take the following actions: 
+1. **Verify correct HTTP status code**. For example, creating a resource should return 201 CREATED and unpermitted requests should return 403 FORBIDDEN, etc.
+2. **Verify response payload**. Check valid JSON body and correct field names, types, and values including in error responses.
+3. **Verify response headers**. HTTP server headers have implications on both security and performance.
+
+## Framework Structure
 
 ## Packages : 
 We have separate packages for test, utility and testdata, All tests related classes come under Tests Package.
@@ -43,5 +57,5 @@ we use 1 as a repository to store our tests scripts.
 ## Jenkins
 By using Jenkins CI (Continuous Integration) Tool, We execute test cases on daily and for Nightly execution based on the schedule.Test Result will be sent to the peers using Jenkins.
 
-##Extent Reports 
+## Extent Reports 
 For the reporting purpose, we are using extent reports. it generates beautiful HTML reports. we use the extent reports for maintaining logs and to include the screenshots of failed test cases in the Extent Report

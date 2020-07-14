@@ -8,7 +8,6 @@ class RequestKyc(unittest.TestCase):
     log = cl.customLogger(logging.DEBUG)
 
     # Get user data from the excel sheet.
-    loc = ("C:\\Users\\sagar\\PycharmProjects\\SilaMoneyAutomationTesting\\testdata\\datasheet.xls")
     getUserHandle, getPrivateKey = utility.getDataFromSheet(loc)
 
     def test_register_kyc_200(self):
